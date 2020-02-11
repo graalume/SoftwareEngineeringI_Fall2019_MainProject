@@ -1,0 +1,338 @@
+body{
+     background: #82A88E;
+ }
+
+ h1{
+     color: #004A48;
+     text-align: center;
+     font-family: 'Arvo', serif;
+     font-size: 45px;
+ }
+
+ tr {
+     width: 500px;
+ }
+
+
+ td {
+     width: 100px;
+     height: 135px;
+     text-align: center;
+     color: #004A48;
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+ } /*adjusts text colors */
+
+     td:empty {
+         display: none;
+         width: 0px;
+         height: 0px;
+     }
+
+ /*.cardContainer {
+     margin-bottom: -110%;
+ }*/
+
+
+ #score {
+  position: absolute;
+  z-index: 9;
+  background-color:#857efc ;
+  text-align: center;
+  left:66px;
+  top:245px;
+  border: 1px solid black;
+  justify-content: center;
+  width: 150px;
+  height: 135px;
+  border-radius: 20px;
+  color: black;
+  font-family: 'Arvo', serif;
+ }
+
+ .title {
+     font-weight: bold;
+ } /*column titles*/
+
+ .cardLocation {
+     width: 100px;
+     background-color: beige;
+     border-radius: 20px;
+     border-style: solid;
+     margin-top: -50%;
+     float:left
+ }
+
+ .Deal:hover {
+     width: 100px;
+     background-color: #8199A8;
+     border-radius: 20px;
+ }
+
+ .Deal {
+     display:flex;
+     align-items: right;
+     justify-content:center;
+
+     width: 100px;
+     height: 135px;
+     background-color: beige;
+     border-radius: 20px;
+     color: #004A48;
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+ }
+
+
+ .cardTable{
+     display: flex;
+     align-items: center;
+     justify-content:center;
+ }
+
+ /*.cardContainer{
+     overflow: hidden;
+ }
+ .cardContainer:last-child, .cardContainer:hover{
+     overflow:visible;
+ }*/
+
+
+ .cardLocation #cardLocation l1{
+     margin-bottom: -110%;
+ }
+
+ #dealButton{
+    /* display:flex;
+     align-items: right;
+     justify-content:flex-end;
+     flex-grow: 3; */
+     position:fixed;
+     right: 80px;
+     top: 238px;
+ }
+
+
+ .functions{
+    /* display:flex;
+     flex-direction:row;
+     justify-content: flex-end;*/
+     position:fixed;
+     right: 60px;
+     top: 400px;
+ }
+
+ #remove1{
+     background-color: #F39F92;
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+     border-radius: 20px;
+     font-size: 14px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+
+ #remove1:hover{
+     background-color: #8199A8;
+ }
+
+ #remove2{
+     background-color: #F39F92;
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+     border-radius: 20px;
+     font-size: 14px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+
+ #remove2:hover{
+     background-color: #8199A8;
+ }
+
+ #remove3{
+     background-color: #F39F92;
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+     border-radius: 20px;
+     font-size: 14px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+
+ #remove3:hover{
+     background-color: #8199A8;
+ }
+
+ #remove4{
+     background-color: #F39F92;
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+     border-radius: 20px;
+     font-size: 14px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+
+ #remove4:hover{
+     background-color: #8199A8;
+ }
+
+ .textEdit{
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+     font-size: 14.5px;
+ }
+
+ #resetButton{
+         background-color: #F39F92;
+         font-family: 'Arvo', serif;
+         font-weight: regular;
+         border-radius: 20px;
+         font-size: 14px;
+         padding-top: 5px;
+         padding-bottom: 5px;
+         margin-left: 15px;
+         margin-right: 15px;
+ }
+
+ #moveButton{
+     background-color: #F39F92;
+     font-family: 'Arvo', serif;
+     font-weight: regular;
+     border-radius: 20px;
+     font-size: 14px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+
+ #from_col{
+      border-radius: 10px;
+      height: 25px;
+      width: 25px;
+ }
+
+ #to_col{
+      border-radius: 10px;
+      height: 25px;
+      width: 25px;
+ }
+
+ /* Modal background */
+ .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     padding-top: 100px; /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+
+ /* Modal Content */
+ .modal-content {
+     background-color: #fefefe;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 20%;
+ }
+
+ /* The Close Button for win modal*/
+ .close1 {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+ }
+
+ .close1:hover,
+ .close1:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ /* The Close Button for lose modal*/
+ .close2 {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+ }
+
+ .close2:hover,
+ .close2:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ .ColumnTitles{
+    background-color: #F39F92;
+        font-family: 'Arvo', serif;
+        font-weight: regular;
+        border-radius: 20px;
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+
+ }
+
+ #gameLangButtonSpanish{
+      background-color: #F39F92;
+      font-family: 'Arvo', serif;
+      font-weight: regular;
+      border-radius: 20px;
+      font-size: 14px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      left: 140px;
+      top: 434px;
+      position: absolute;
+
+
+ }
+
+ #gameLangButtonEnglish:hover{
+     background-color: #8199A8;
+ }
+
+ #gameLangButtonEnglish{
+      background-color: #F39F92;
+      font-family: 'Arvo', serif;
+      font-weight: regular;
+      border-radius: 20px;
+      font-size: 14px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      left: 20px;
+      top: 434px;
+      position: absolute;
+}
+
+#gameLangButtonSpanish:hover{
+     background-color: #8199A8;
+ }

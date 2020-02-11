@@ -1,0 +1,383 @@
+<h1>Ases arriba</h1>
+
+<link href="/assets/css/SpanishAcesUp.css" rel="stylesheet">
+<script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Vidaloka|ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+<body>
+
+<table class="cardTable">
+    <tr class="title">
+        <td id="removeCol1"> <button id="Remove1">Retirar Col 1</button></td>
+        <td> <button id="Remove2">Retirar Col 2</button></td>
+        <td> <button id="Remove3">Retirar Col 3</button></td>
+        <td> <button id="Remove4">Retirar Col 4</button></td>
+    </tr>
+
+    <tr>
+        <td class="columnOfCards" id="c0">
+            <table>
+                <div class="cardContainer">
+                    <tr><td class="cardLocation l0"></td></tr>
+                </div>
+                <div class="cardContainer">
+                    <tr><td class="cardLocation l1"></td></tr>
+                </div>
+                <tr><td class="cardLocation l2"></td></tr>
+                <tr><td class="cardLocation l3"></td></tr>
+                <tr><td class="cardLocation l4"></td></tr>
+                <tr><td class="cardLocation l5"></td></tr>
+                <tr><td class="cardLocation l6"></td></tr>
+                <tr><td class="cardLocation l7"></td></tr>
+                <tr><td class="cardLocation l8"></td></tr>
+                <tr><td class="cardLocation l9"></td></tr>
+                <tr><td class="cardLocation l10"></td></tr>
+                <tr><td class="cardLocation l11"></td></tr>
+                <tr><td class="cardLocation l12"></td></tr>
+                <tr><td class="cardLocation l13"></td></tr>
+            </table>
+        </td>
+        <td class="columnOfCards" id="c1">
+            <table>
+                <tr><td class="cardLocation l0"></td></tr>
+                <tr><td class="cardLocation l1"></td></tr>
+                <tr><td class="cardLocation l2"></td></tr>
+                <tr><td class="cardLocation l3"></td></tr>
+                <tr><td class="cardLocation l4"></td></tr>
+                <tr><td class="cardLocation l5"></td></tr>
+                <tr><td class="cardLocation l6"></td></tr>
+                <tr><td class="cardLocation l7"></td></tr>
+                <tr><td class="cardLocation l8"></td></tr>
+                <tr><td class="cardLocation l9"></td></tr>
+                <tr><td class="cardLocation l10"></td></tr>
+                <tr><td class="cardLocation l11"></td></tr>
+                <tr><td class="cardLocation l12"></td></tr>
+                <tr><td class="cardLocation l13"></td></tr>
+            </table>
+        </td>
+        <td class="columnOfCards" id="c2">
+            <table>
+                <tr><td class="cardLocation l0"></td></tr>
+                <tr><td class="cardLocation l1"></td></tr>
+                <tr><td class="cardLocation l2"></td></tr>
+                <tr><td class="cardLocation l3"></td></tr>
+                <tr><td class="cardLocation l4"></td></tr>
+                <tr><td class="cardLocation l5"></td></tr>
+                <tr><td class="cardLocation l6"></td></tr>
+                <tr><td class="cardLocation l7"></td></tr>
+                <tr><td class="cardLocation l8"></td></tr>
+                <tr><td class="cardLocation l9"></td></tr>
+                <tr><td class="cardLocation l10"></td></tr>
+                <tr><td class="cardLocation l11"></td></tr>
+                <tr><td class="cardLocation l12"></td></tr>
+                <tr><td class="cardLocation l13"></td></tr>
+            </table>
+        </td>
+        <td class="columnOfCards" id="c3">
+            <table>
+                <tr><td class="cardLocation l0"></td></tr>
+                <tr><td class="cardLocation l1"></td></tr>
+                <tr><td class="cardLocation l2"></td></tr>
+                <tr><td class="cardLocation l3"></td></tr>
+                <tr><td class="cardLocation l4"></td></tr>
+                <tr><td class="cardLocation l5"></td></tr>
+                <tr><td class="cardLocation l6"></td></tr>
+                <tr><td class="cardLocation l7"></td></tr>
+                <tr><td class="cardLocation l8"></td></tr>
+                <tr><td class="cardLocation l9"></td></tr>
+                <tr><td class="cardLocation l10"></td></tr>
+                <tr><td class="cardLocation l11"></td></tr>
+                <tr><td class="cardLocation l12"></td></tr>
+                <tr><td class="cardLocation l13"></td></tr>
+            </table>
+        </td>
+        <td class="columnOfCards" id="c4">
+            <table>
+            </table>
+
+        </td>
+
+        <!-- <td class="columnOfCards" id="c5">
+         <table>
+             <button id="dealButton" class="Deal">Deal</button>
+         </table>
+         </td> -->
+
+    </tr>
+
+</table>
+
+
+<div id="gameLangOption">
+    <button id="gameLangButtonSpanish" onclick="window.location.href = '/views/AcesUp/SpanishGame.html">Juego español</button>
+    <button id="gameLangButtonEnglish" onclick="window.location.href = '/views/AcesUp/AcesUp.flt.html'">Juego de ingles</button>
+</div>
+
+
+<div id="score" class="score">
+    <div id="scoreWindow"></div>
+    <p id="score_window">blank</p>
+</div>
+
+<button id="dealButton" class="Deal">Acuerdo</button>
+
+<div class="functions">
+
+    <div class="textEdit">
+        <!--<BR> Remove from: <button id="Remove1">Column1</button><button id="Remove2">Column2</button><button id="Remove3">Column3</button><button id="Remove4">Column4</button>-->
+
+        <BR>Moverse desde la columna <input type="text" id="from_col" /> a <input type="text" id="to_col" /> <button id="moveButton">Moverse</button>
+    </div>
+
+    <button type="reset" value="Reset" id="resetButton">Nuevo juego</button>
+
+</div>
+
+<!-- win Modal -->
+<div id="winModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close1">&times;</span>
+        <b>You win!</b>
+    </div>
+
+</div>
+
+<!-- lose Modal -->
+<div id="loseModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close2">&times;</span>
+        <b>You lose :(</b>
+    </div>
+
+</div>
+
+<script>
+        var game;
+        var win_sound = new Audio('/assets/win.mp3');
+        var lose_sound = new Audio('/assets/lose.mp3');
+        function display(game) {
+            console.log(game);
+            $("#score_window").html('Score: ' + game.stats["score"])
+            $('.columnOfCards .cardLocation').html("");
+            $.each(game.cols.cols[0], function (key, val) {
+                if (val.suit == "Coins")
+                    icon = "❂";
+                if (val.suit == "Clubs")
+                    icon = "⚚";
+                if (val.suit == "Swords")
+                    icon = "♱";
+                if (val.suit == "Cups")
+                    icon = "¤";
+                if (val.suit == "Joker")
+                    icon = " ";
+
+                if (val.value == 14)
+                    $('#c0 .l' + key).html(icon + '1');
+                if (val.value == 15)
+                    $('#c0 .l' + key).html(icon + 'J');
+                if (val.value < 13)
+                    $('#c0 .l' + key).html(icon + val.value);
+            });
+            $.each(game.cols.cols[1], function (key, val) {
+                if (val.suit == "Coins")
+                    icon = "❂";
+                if (val.suit == "Clubs")
+                    icon = "⚚";
+                if (val.suit == "Swords")
+                    icon = "♱";
+                if (val.suit == "Cups")
+                    icon = "¤";
+                if (val.suit == "Joker")
+                    icon = " ";
+
+                if (val.value == 14)
+                    $('#c1 .l' + key).html(icon + '1');
+                if (val.value == 15)
+                    $('#c1 .l' + key).html(icon + 'J');
+                if (val.value < 13)
+                    $('#c1 .l' + key).html(icon + val.value);
+            });
+            $.each(game.cols.cols[2], function (key, val) {
+                if (val.suit == "Coins")
+                    icon = "❂";
+                if (val.suit == "Clubs")
+                    icon = "⚚";
+                if (val.suit == "Swords")
+                    icon = "♱";
+                if (val.suit == "Cups")
+                    icon = "¤";
+                if (val.suit == "Joker")
+                    icon = " ";
+
+                if (val.value == 14)
+                    $('#c2 .l' + key).html(icon + '1');
+                if (val.value == 15)
+                    $('#c2 .l' + key).html(icon + 'J');
+                if (val.value < 13)
+                    $('#c2 .l' + key).html(icon + val.value);
+            });
+            $.each(game.cols.cols[3], function (key, val) {
+                if (val.suit == "Coins")
+                    icon = "❂";
+                if (val.suit == "Clubs")
+                    icon = "⚚";
+                if (val.suit == "Swords")
+                    icon = "♱";
+                if (val.suit == "Cups")
+                    icon = "¤";
+                if (val.suit == "Joker")
+                    icon = " ";
+
+                if (val.value == 14)
+                    $('#c3 .l' + key).html(icon + '1');
+                if (val.value == 15)
+                    $('#c3 .l' + key).html(icon + 'J');
+                if (val.value < 13)
+                    $('#c3 .l' + key).html(icon + val.value);
+            });
+        }
+        // Calls ApplicationController.gameGet()
+        $.getJSON("http://localhost:8080/gameSpn", function (data) {
+            display(data);
+            game = data;
+        });
+        //function newGame(){
+        //    gameGet();
+        //});
+        $("#resetButton").click(function () {
+            location.reload();
+        });
+
+         $("#gameLangButtonEnglish").click(function() {
+            location.assign("/");
+        });
+         $("#gameLangButtonSpanish").click(function() {
+            location.assign("/views/AcesUp/SpanishGame.flt.html");
+        });
+
+        $("#dealButton").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/dealGame",
+                data: JSON.stringify(game),
+                success: function (data, status) {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    game = data;
+                    display(data);
+                    //if the player wins, open pop-up
+                    if (game.stats["is_win"]) {
+                        win_sound.play();
+                        winmodal.style.display = "block";
+                    }
+                    //if the player loses, open pop-up
+                    if (game.stats["is_lose"]) {
+                        lose_sound.play();
+                        losemodal.style.display = "block";
+                    }
+                },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+            });
+        });
+        // Get the modal
+        var winmodal = document.getElementById("winModal");
+        var losemodal = document.getElementById("loseModal");
+        // Get the span element that closes win modal
+        var span1 = document.getElementsByClassName("close1")[0];
+        // When the user clicks (x), close the win modal
+        span1.onclick = function () {
+            winmodal.style.display = "none";
+        }
+        // Get the span element that closes the lose modal
+        var span2 = document.getElementsByClassName("close2")[0];
+        // When the user clicks (x), close the lose modal
+        span2.onclick = function () {
+            losemodal.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == winmodal) {
+                winmodal.style.display = "none";
+            }
+            if (event.target == losemodal) {
+                losemodal.style.display = "none";
+            }
+        }
+        function removeCard(colNumber) {
+            $.ajax({
+                type: "POST",
+                url: "/removeCard/" + colNumber,
+                data: JSON.stringify(game),
+                success: function (data, status) {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    game = data;
+                    display(data);
+                },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+            });
+        }
+        $("#Remove1").click(function () {
+            removeCard(0);
+        });
+        $("#Remove2").click(function () {
+            removeCard(1);
+        });
+        $("#Remove3").click(function () {
+            removeCard(2);
+        });
+        $("#Remove4").click(function () {
+            removeCard(3);
+        });
+        $("#moveButton").click(function () {
+            var colFrom = $("#from_col").val();
+            var colTo = $("#to_col").val();
+            colFrom = colFrom - 1;
+            colTo = colTo - 1;
+            $.ajax({
+                type: "POST",
+                url: "/moveCard/" + colFrom + "/" + colTo,
+                data: JSON.stringify(game),
+                success: function (data, status) {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    game = data;
+                    display(data);
+                    if (game.stats["noMove"]) {
+                        alert("Can't move card. Try again!");
+                    }
+                },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+            });
+        });
+        dragElement(document.getElementById("score"));
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                elmnt.onmousedown = dragMouseDown;
+            }
+            function dragMouseDown(e) {
+                pos3 = e.clientX, pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+            function elementDrag(e) {
+                pos1 = pos3 - e.clientX, pos2 = pos4 - e.clientY, pos3 = e.clientX, pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+</body>
+</html>
